@@ -24,6 +24,7 @@
         }
         
         dispatch('add-feedback', newFeedBack)
+        text = ''
        
     }
 
