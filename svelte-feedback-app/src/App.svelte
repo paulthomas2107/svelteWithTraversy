@@ -22,11 +22,14 @@ import FeedbackList from './components/FeedbackList.svelte';
   ]
 
 
-  
+  const deleteFeedback = (e) => {
+	const itemId = e.detail
+	feedback = feedback.filter((item) => item.id != itemId)
+  }
 </script>
 
 <main class="container">
-  <FeedbackList feedback={feedback} />
+  <FeedbackList feedback={feedback} on:delete-feedback={deleteFeedback} />
 	
 </main>
 
