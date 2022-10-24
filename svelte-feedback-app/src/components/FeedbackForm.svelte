@@ -1,8 +1,10 @@
 <script>
   import Card from './Card.svelte';
   import Button from './Button.svelte';
+  import RatingSelect from "./RatingSelect.svelte";
 
   let text = '';
+  let rating = 10
   let btnDisabled = true;
   let min = 10
   let message
@@ -24,6 +26,7 @@
   </header>
 
   <form>
+    <RatingSelect />
     <div class="input-group">
       <input
         type="text" on:input={handleInput}
